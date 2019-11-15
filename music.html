@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qcsera Music</title>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/mp3player.css" media="screen">
+    <link rel="stylesheet" href="css/main.css">
+    
+    
+    
+</head>
+<body>
+
+    <!--Hamburger Menu-->
+    
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="music.html">Music</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-wrapper">
+        <div class="main-title">
+            <h1>Music Library</h1>
+            <p>I compose and produce super realistic orchestral soundtracks & trailers, corporate music. Enjoy!</p>
+            <ul class="main-style-list">
+                <li>ORCHESTRAL</li>
+                <li>CINEMATIC</li>
+                <li>MOVIE&nbsp;TRAILER</li>
+                <li>CORPORATE</li>
+                <li>CHILLOUT</li>
+                <li>BACKGROUND</li>
+                <li>AMBIENT</li>
+            </ul>
+            
+        </div>
+        <main class="main-content">
+            <!-- Audio player -->
+            <div id="container">
+                <div id="audio-image">
+                    <img class="cover" />
+                </div>
+                <div id="audio-player">
+                    <div id="audio-info">
+                        <span class="artist"></span> - <span class="title"></span>
+                    </div>
+                    <input id="volume" type="range" min="0" max="10" value="5" />
+                    <br>
+                    <div id="buttons">
+                        <span>
+                        <button id="prev"></button>
+                        <button id="play"></button>
+                        <button id="pause"></button>
+                        <button id="stop"></button>
+                        <button id="next"></button>
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div id="tracker">
+                        <div id="progressBar">
+                            <span id="progress"></span>
+                        </div>
+                        <span id="duration"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                        <ul id="playlist" class="hidden">
+                            <li song="Hollywood_movie_trailer.mp3" cover="orchestral_movie_trailer.jpg" artist="Kucsera Csaba">Hollywood Movie Trailer.mp3</li>
+                            <li song="Cinema_battle_action.mp3" cover="cinema_battle_action.jpg" artist="Q">Cinema Battle Action.mp3</li>
+                            <li song="Cinematic_epic_trailer.mp3" cover="cinematic_epic_trailer.jpg" artist="Kucsera Csaba">Cinematic Epic Trailer.mp3</li>
+                            <li song="Emotional_lounge_chillout.mp3" cover="emotional_lounge_chillout.jpg" artist="Kucsera Csaba">Emotional Lounge Chillout.mp3</li>
+                            <li song="Ambient_piano.mp3" cover="ambient_piano.jpg" artist="Kucsera Csaba">Ambient Piano.mp3</li>
+                            <li song="Cinematic_piano.mp3" cover="cinematic_piano.jpg" artist="Q">Cinematic Piano.mp3</li>
+                            <li song="Orchestral_christmas.mp3" cover="rainforest_cinematic_theme.jpg" artist="Kucsera Csaba">Rainforest Cinematic Theme.mp3</li>
+                            <li song="Orchestral_christmas_cartoon.mp3" cover="orchestral_christmas_cartoon.jpg" artist="Kucsera Csaba">Orchestral Christmas.mp3</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="music.html">Music</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">&copy; 2019 Qcsera :: qcsera@gmail.com</div>
+        </div>
+
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>

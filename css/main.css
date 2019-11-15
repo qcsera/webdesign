@@ -1,0 +1,373 @@
+:root {
+  --primary-color: rgba(81, 81, 81, 0.75);
+  --overlay-color: rgba(26, 27, 30, 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.4;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before {
+  content: '';
+  background: url("../img/bg-sky.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.showcase .showcase-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  margin-top: 3rem;
+}
+
+.showcase p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.showcase-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  height: 100%;
+  width: 100%;
+}
+
+.showcase-card-container .showcase-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0px solid #fff;
+  border-radius: 1rem;
+  width: 35%;
+  max-width: 300px;
+  min-width: 150px;
+  height: 100%;
+  max-height: 400px;
+  background-image: linear-gradient(240deg, #ffa602, #57ee00);
+  -webkit-box-shadow: 10px 18px 46px -15px rgba(0, 0, 0, 0.41);
+          box-shadow: 10px 18px 46px -15px rgba(0, 0, 0, 0.41);
+  margin-top: 7rem;
+}
+
+.showcase-card-container .showcase-card .showcase-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.showcase-card-container .showcase-card .showcase-info h2 {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.showcase-card-container .showcase-card .showcase-info p {
+  font-weight: 200;
+  font-size: 0.9rem;
+  margin: 0 0.3rem;
+}
+
+.showcase-card-container .showcase-card img {
+  border-radius: 50%;
+  width: 50%;
+  margin: 2rem 0;
+  margin-top: 2rem;
+}
+
+.showcase-card-container .showcase-card .showcase-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  border-radius: 15px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#c1c1c1), to(#ffffff));
+  background-image: linear-gradient(0deg, #c1c1c1, #ffffff);
+  -webkit-box-shadow: 2px 3px 2px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 2px -1px rgba(0, 0, 0, 0.2);
+  height: 25px;
+  line-height: 1.2rem;
+  width: 50%;
+  font-size: 0.7rem;
+  -webkit-transition: translate 1s ease;
+  transition: translate 1s ease;
+}
+
+.showcase-card-container .showcase-card .showcase-btn:hover {
+  -webkit-transform: translateY(-10);
+          transform: translateY(-10);
+}
+
+.showcase-card-container .showcase-card:nth-child(1) {
+  background-image: linear-gradient(240deg, #ff02f2, #06b4ff);
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+  padding: 10px;
+  color: #eee;
+  font-weight: 200;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+main .card {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+main .card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+main .card img {
+  width: 100%;
+}
+
+main .card .info {
+  padding: 1rem;
+}
+
+.main-wrapper {
+  background-color: #171717;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: minmax(200px, 300px) 1fr minmax(100px, 150px);
+      grid-template-rows: minmax(200px, 300px) 1fr minmax(100px, 150px);
+}
+
+.main-wrapper:hover > .main-title > h1 {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main-wrapper .main-title {
+  color: #fff;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  text-align: center;
+  background: url("../img/bg-sky.jpg") no-repeat center center/cover;
+}
+
+.main-wrapper .main-title h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-top: 2em;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.main-wrapper .main-title p {
+  color: inherit;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+.main-wrapper .main-title ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-wrapper .main-title ul li {
+  border: 1px solid #fff;
+  margin: 0.2rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.main-wrapper .main-content {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.main-wrapper .footer {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #222222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.main-wrapper .footer .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.main-wrapper .footer .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-wrapper .footer .footer-nav ul li a {
+  text-decoration: none;
+  border: 1px solid #fff;
+  margin: 0.5rem;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.main-wrapper .footer .footer-nav ul li a:hover {
+  background-color: rgba(238, 238, 238, 0.3);
+}
+
+.main-wrapper .footer .footer-contact {
+  font-size: 0.8rem;
+  margin: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
